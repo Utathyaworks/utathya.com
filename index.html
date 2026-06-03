@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utathya Aich &mdash; ML Researcher</title>
+  <meta name="description" content="Utathya Aich &mdash; ML Developer at CNH Industrial, independent researcher in multimodal learning, clinical AI, and language reasoning.">
+  <meta name="author" content="Utathya Aich">
+  <link rel="icon" href="images/icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================================================================
+     Navigation
+     ================================================================ -->
+<nav aria-label="Site navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#hero">Utathya Aich</a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#research-statement">Statement</a></li>
+      <li><a href="#interests">Research</a></li>
+      <li><a href="#featured-pubs">Publications</a></li>
+      <li><a href="#guides">Guides</a></li>
+      <li><a href="#mentorships">Mentorships</a></li>
+      <li><a href="#academic-services">Academic Services</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <!-- <li><a href="#blog">Blog</a></li> -->
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ============================================================
+       Hero / Introduction
+       ============================================================ -->
+  <section id="hero">
+    <div class="hero-layout">
+
+      <div class="hero-photo">
+        <img src="images/Snag1circle.png" alt="Utathya Aich" width="170" height="170">
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-name">Utathya Aich</h1>
+        <p class="hero-title">
+          Software Developer &ndash; ML &nbsp;&middot;&nbsp; CNH Industrial, Gurgaon
+          &nbsp;&middot;&nbsp; Independent Researcher
+        </p>
+        <p class="hero-bio">
+          I work at the intersection of <strong>multimodal learning, clinical AI, and language
+          reasoning</strong>. My research focuses on systems that fuse vision, text, and structured
+          knowledge &mdash; with an emphasis on reliability, hallucination mitigation, and deployment
+          under limited supervision. I collaborate with researchers at <strong>Jadavpur University,
+          University of Liverpool, IIIT Bangalore, ISI Kolkata, and the University of South
+          Carolina</strong>.
+        </p>
+
+        <div class="hero-highlights">
+          <p class="hero-highlight hero-highlight-phd">
+            <strong>Prospective PhD Student</strong> &nbsp;&middot;&nbsp;
+            Looking for research opportunities in multimodal AI, clinical AI, and language reasoning.
+          </p>
+          <p class="hero-highlight hero-highlight-collab">
+            <strong>Open for Collaboration</strong> &nbsp;&middot;&nbsp;
+            Happy to collaborate on high-impact projects, papers, and challenge benchmarks.
+          </p>
+        </div>
+
+        <div class="hero-links">
+          <a class="hero-link" href="https://github.com/Utathyaworks" target="_blank" rel="noopener">GitHub</a>
+          <!-- TODO: replace YOUR_SCHOLAR_ID with your real Google Scholar ID -->
+          <a class="hero-link" href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener">Scholar</a>
+          <a class="hero-link" href="mailto:us4decaich@gmail.com">Email</a>
+          <a class="hero-link" href="https://linkedin.com/in/utathyaaich" target="_blank" rel="noopener">LinkedIn</a>
+          <!-- TODO: replace # with your CV PDF URL -->
+          <a class="hero-link" href="#" target="_blank" rel="noopener">CV</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Research Statement
+       ============================================================ -->
+  <section id="research-statement">
+    <h2 class="section-title">Research Statement</h2>
+    <div class="statement-block">
+      <p>
+        My research addresses a central challenge in AI deployment: building systems that are
+        <strong>reliable, grounded, and interpretable</strong> when operating across heterogeneous
+        data modalities. I am particularly interested in how vision, language, and structured
+        knowledge can be jointly leveraged to solve high-stakes problems in <strong>clinical AI
+        and document intelligence</strong>.
+      </p>
+      <p>
+        A recurring theme in my work is <strong>low-supervision learning</strong> — designing
+        models that remain effective when labeled data is scarce or expensive. I explore this
+        through semi-supervised encoders, retrieval-augmented generation, and knowledge-graph
+        reasoning pipelines that reduce dependence on large annotated datasets.
+      </p>
+      <p>
+        Going forward, I aim to deepen my focus on <strong>hallucination mitigation in
+        multi-agent LLM systems</strong> and extend my clinical AI work to longitudinal
+        patient data, bridging the gap between AI research and real-world medical deployment.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Research Interests
+       ============================================================ -->
+  <section id="interests">
+    <h2 class="section-title">Research Interests</h2>
+    <div class="interests-wrap">
+      <span class="interest-chip">Multimodal Learning</span>
+      <span class="interest-chip">Vision&ndash;Language Models</span>
+      <span class="interest-chip">Clinical AI</span>
+      <span class="interest-chip">Retrieval-Augmented Generation</span>
+      <span class="interest-chip">Hallucination Mitigation</span>
+      <span class="interest-chip">Medical Image Segmentation</span>
+      <span class="interest-chip">Document Intelligence</span>
+      <span class="interest-chip">Knowledge Graphs</span>
+      <span class="interest-chip">Efficient Fine-Tuning</span>
+      <span class="interest-chip">Semi-Supervised Learning</span>
+      <span class="interest-chip">EEG &amp; Neurological AI</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       News & Updates  (featured publications rendered as a news feed)
+       ============================================================ -->
+  <section id="featured-pubs">
+    <h2 class="section-title">News &amp; Updates</h2>
+    <p class="pub-note">* equal contribution &nbsp;&middot;&nbsp; scroll to see all recent publications</p>
+
+    <!--
+      Populated dynamically by js/main.js as news-style items.
+      Source data: data/publications.js  (featured: true entries).
+      Scrollable — max-height set in css/styles.css.
+    -->
+    <div class="news-scroll" id="featured-pub-list"></div>
+
+    <div class="show-more-wrap">
+      <button class="btn-show-more" id="btn-show-more">Show All Publications</button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Publications by Year
+       ============================================================ -->
+  <section id="pubs-by-year">
+    <h2 class="section-title">Publications by Year</h2>
+
+    <!--
+      Tab buttons and panes are generated by js/main.js.
+      Each year tab shows 3 papers; "View All" links to publications/YEAR.html.
+    -->
+    <div class="year-tabs" id="year-tabs" role="tablist"></div>
+    <div id="year-panes"></div>
+  </section>
+
+  <!-- ============================================================
+       Guides
+       ============================================================ -->
+  <section id="guides">
+    <h2 class="section-title">Who Guided Me</h2>
+    <p class="pub-note">Professors I worked under, with corresponding paper references.</p>
+
+    <div class="mentor-col">
+      <article class="mentor-card">
+        <h4 class="mentor-name">Prof. Ranjan Sarkar</h4>
+        <p class="mentor-affil">Jadavpur University</p>
+        <p class="mentor-note">Collaborative supervision on multimodal clinical AI and challenge design.</p>
+        <p class="mentor-ref">
+          Corresponding paper:
+          <a href="publications/2026.html">Cross-Modal Alignment for Clinical Report Generation (CBMS 2026)</a>
+        </p>
+      </article>
+
+      <article class="mentor-card">
+        <h4 class="mentor-name">Prof. Priyankar Kumar Singh</h4>
+        <p class="mentor-affil">IIIT Bangalore</p>
+        <p class="mentor-note">Guidance on low-resource visual learning and efficient model adaptation.</p>
+        <p class="mentor-ref">
+          Corresponding paper:
+          <a href="publications/2026.html">Lightweight Visual Encoders for Low-Resource Medical Image Analysis (CVPRW 2026)</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Mentorships
+       ============================================================ -->
+  <section id="mentorships">
+    <h2 class="section-title">Mentorships</h2>
+    <p class="pub-note">Mentored students and what they are doing now, with co-authored paper references.</p>
+
+    <div class="mentor-col">
+      <article class="mentor-card">
+        <h4 class="mentor-name">Ritwika Roy</h4>
+        <p class="mentor-now">Now: Research engineer focused on clinical report generation pipelines.</p>
+        <p class="mentor-ref">
+          Co-authored reference:
+          <a href="publications/2026.html">Cross-Modal Alignment for Clinical Report Generation (CBMS 2026)</a>
+        </p>
+      </article>
+
+      <article class="mentor-card">
+        <h4 class="mentor-name">Debjyoti Mandal</h4>
+        <p class="mentor-now">Now: Working on hallucination robustness and multi-agent LLM evaluation.</p>
+        <p class="mentor-ref">
+          Co-authored reference:
+          <a href="publications/2026.html">RAG-Guided Knowledge Graph Reasoning for Document QA (ICPR 2026)</a>
+        </p>
+      </article>
+
+      <article class="mentor-card">
+        <h4 class="mentor-name">Shreya Ghosh</h4>
+        <p class="mentor-now">Now: Continuing research in multilingual document understanding benchmarks.</p>
+        <p class="mentor-ref">
+          Co-authored reference:
+          <a href="publications/2026.html">VISTAC 2: Vision and Language for Document Understanding (ICPR 2026)</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Academic Services
+       ============================================================ -->
+  <section id="academic-services">
+    <h2 class="section-title">Academic Services</h2>
+    <div class="service-grid">
+      <article class="service-card">
+        <h3 class="service-title">Journal Reviewing</h3>
+        <p class="service-desc">Reviewer for journals and transactions in AI, medical imaging, and document intelligence.</p>
+      </article>
+      <article class="service-card">
+        <h3 class="service-title">Conference Program Committees</h3>
+        <p class="service-desc">Program committee and reviewer support for leading AI/ML conferences and workshops.</p>
+      </article>
+      <article class="service-card">
+        <h3 class="service-title">Challenge Organization</h3>
+        <p class="service-desc">Co-organizing benchmark-driven competitions in clinical imaging and multimodal reasoning.</p>
+      </article>
+      <article class="service-card">
+        <h3 class="service-title">Student Mentorship</h3>
+        <p class="service-desc">Mentoring UG/PG researchers on publication-ready projects and research communication.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Awards
+       ============================================================ -->
+  <section id="awards">
+    <h2 class="section-title">Awards</h2>
+    <div class="award-grid">
+      <article class="award-card">
+        <div class="award-year">2026</div>
+        <h3 class="award-title">Outstanding Reviewer Recognition</h3>
+        <p class="award-desc">Recognized for high-quality and timely reviewing contributions in AI venues.</p>
+      </article>
+      <article class="award-card">
+        <div class="award-year">2025</div>
+        <h3 class="award-title">Research Excellence Distinction</h3>
+        <p class="award-desc">Awarded for impactful contributions to multimodal and clinical AI research.</p>
+      </article>
+      <article class="award-card">
+        <div class="award-year">2024</div>
+        <h3 class="award-title">Best Project / Innovation Mention</h3>
+        <p class="award-desc">Honored for translating research ideas into deployable AI systems.</p>
+      </article>
+      <article class="award-card">
+        <div class="award-year">2023</div>
+        <h3 class="award-title">Academic Merit Recognition</h3>
+        <p class="award-desc">Recognized for early research contributions and collaborative publications.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Blog (to be added later)
+       ============================================================ -->
+  <!--
+  <section id="blog">
+    <h2 class="section-title">Blog</h2>
+    <p class="pub-note">This section will be added soon.</p>
+  </section>
+  -->
+
+  <!-- ============================================================
+       Hobbies
+       ============================================================ -->
+  <section id="hobbies">
+    <h2 class="section-title">Hobbies</h2>
+    <div class="hobby-grid">
+      <article class="hobby-card">
+        <h3 class="hobby-title">Long-Distance Running</h3>
+        <p class="hobby-desc">Building consistency and endurance through regular runs and interval sessions.</p>
+      </article>
+      <article class="hobby-card">
+        <h3 class="hobby-title">Technical Writing</h3>
+        <p class="hobby-desc">Writing research notes, implementation breakdowns, and explainers for complex AI ideas.</p>
+      </article>
+      <article class="hobby-card">
+        <h3 class="hobby-title">Reading Biographies</h3>
+        <p class="hobby-desc">Exploring books on scientists, innovators, and founders to learn decision patterns.</p>
+      </article>
+      <article class="hobby-card">
+        <h3 class="hobby-title">Badminton</h3>
+        <p class="hobby-desc">Playing for focus and reflex training, usually in doubles format on weekends.</p>
+      </article>
+    </div>
+  </section>
+
+</div><!-- /.container -->
+
+<!-- ================================================================
+     Footer
+     ================================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Utathya Aich</strong>
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:us4decaich@gmail.com">us4decaich@gmail.com</a>
+      </div>
+      <div class="footer-right">
+        Last updated June 2026
+        &nbsp;&middot;&nbsp;
+        <a href="https://github.com/Utathyaworks" target="_blank" rel="noopener">GitHub</a>
+        &nbsp;&middot;&nbsp;
+        <a href="#hobbies">Hobbies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Publications data must be loaded before main.js -->
+<script src="data/publications.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
