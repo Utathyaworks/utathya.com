@@ -23,6 +23,39 @@
   --nav-h:      86px;
 }
 
+/* ── Draft watermark ───────────────────────────────────────────────── */
+.draft-watermark {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+}
+.draft-watermark span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 9vw;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(200, 30, 30, 0.12);
+  white-space: nowrap;
+  user-select: none;
+}
+.draft-banner {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background: #b91c1c;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  letter-spacing: 0.02em;
+}
+
 /* ── Base ───────────────────────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 
