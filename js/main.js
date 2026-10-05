@@ -111,33 +111,46 @@
     ].join('');
   }
 
-  /* ─── Section: News & Updates (featured pubs as scrollable news feed) ── */
+  /* ─── Section: News & Updates (featured pubs as a rolling ticker) ──── */
   function initFeatured() {
     var container = document.getElementById('featured-pub-list');
     var btn       = document.getElementById('btn-show-more');
     if (!container || typeof publications === 'undefined') return;
+
+    var PX_PER_SECOND = 26;
 
     var recentPub = publications
       .filter(function (p) { return p.status === 'published'; })
       .sort(function (a, b) { return b.year - a.year; })
       .slice(0, 5);
 
-    function applyTopThreeHighlight() {
-      var items = container.querySelectorAll('.news-item');
-      items.forEach(function (item) {
+    function applyTopThreeHighlight(track, count) {
+      var items = track.querySelectorAll('.news-item');
+      items.forEach(function (item, i) {
         item.classList.remove('top-highlight-1', 'top-highlight-2', 'top-highlight-3');
+        var pos = i % count;
+        if (pos === 0) item.classList.add('top-highlight-1');
+        if (pos === 1) item.classList.add('top-highlight-2');
+        if (pos === 2) item.classList.add('top-highlight-3');
       });
-
-      if (items[0]) items[0].classList.add('top-highlight-1');
-      if (items[1]) items[1].classList.add('top-highlight-2');
-      if (items[2]) items[2].classList.add('top-highlight-3');
     }
 
     function render(list) {
-      container.innerHTML = list.map(function (p) { return newsItemHTML(p); }).join('');
-      /* reset scroll to top whenever the list changes */
-      container.scrollTop = 0;
-      applyTopThreeHighlight();
+      if (!list.length) { container.innerHTML = ''; return; }
+
+      var itemsHTML = list.map(function (p) { return newsItemHTML(p); }).join('');
+      /* duplicate the list so a -50% translateY loop is seamless */
+      container.innerHTML = '<div class="news-track">' + itemsHTML + itemsHTML + '</div>';
+
+      var track = container.querySelector('.news-track');
+      applyTopThreeHighlight(track, list.length);
+
+      requestAnimationFrame(function () {
+        var singleCopyHeight = track.scrollHeight / 2;
+        var duration = Math.max(singleCopyHeight / PX_PER_SECOND, 10);
+        track.style.setProperty('--scroll-duration', duration + 's');
+        track.classList.add('news-track-rolling');
+      });
     }
 
     render(recentPub);
